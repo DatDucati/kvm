@@ -138,6 +138,7 @@ var defaultConfig = &Config{
 		RelativeMouse: true,
 		Keyboard:      true,
 		MassStorage:   true,
+		SerialPort:    true,
 	},
 	NetworkConfig:   &network.NetworkConfig{},
 	DefaultLogLevel: "INFO",

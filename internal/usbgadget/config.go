@@ -59,6 +59,8 @@ var defaultGadgetConfig = map[string]gadgetConfigItem{
 	// mass storage
 	"mass_storage_base": massStorageBaseConfig,
 	"mass_storage_lun0": massStorageLun0Config,
+	// Serial Port
+	"serial_port": serialPortConfig,
 }
 
 func (u *UsbGadget) isGadgetConfigItemEnabled(itemKey string) bool {
@@ -73,6 +75,8 @@ func (u *UsbGadget) isGadgetConfigItemEnabled(itemKey string) bool {
 		return u.enabledDevices.MassStorage
 	case "mass_storage_lun0":
 		return u.enabledDevices.MassStorage
+	case "serial_port":
+		return u.enabledDevices.SerialPort
 	default:
 		return true
 	}
